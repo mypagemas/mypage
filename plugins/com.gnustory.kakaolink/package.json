@@ -1,0 +1,6 @@
+{
+    "version": "0.0.1",
+    "name": "com.gnustory.kakaolink",
+    "cordova_name": "KakaoLinkPlugin",
+    "description": "kakao link plugin"
+}

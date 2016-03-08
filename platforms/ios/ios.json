@@ -1,0 +1,188 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"KakaoLinkPlugin\"><param name=\"ios-package\" value=\"KakaoLinkPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Printer\"><param name=\"ios-package\" value=\"APPPrinter\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "KAKAO_APP_KEY": [
+                        {
+                            "xml": "<string>e8aa9b80eb803ab5ca55a22b2d0ff46b</string>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>kakaoe8aa9b80eb803ab5ca55a22b2d0ff46b</string></array></dict></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "com.gnustory.kakaolink": {
+            "APP_KEY": "e8aa9b80eb803ab5ca55a22b2d0ff46b",
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "de.appplant.cordova.plugin.printer": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "erpia.lhk.test"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ERPia.MyPage"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "pluginId": "cordova-plugin-inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "file": "plugins/com.gnustory.kakaolink/www/js/KakaoLinkPlugin.js",
+            "id": "com.gnustory.kakaolink.KakaoLinkPlugin",
+            "pluginId": "com.gnustory.kakaolink",
+            "clobbers": [
+                "KakaoLinkPlugin"
+            ]
+        },
+        {
+            "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
+            "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+            "pluginId": "com.phonegap.plugins.PushPlugin",
+            "clobbers": [
+                "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+            "id": "cordova-plugin-x-toast.Toast",
+            "pluginId": "cordova-plugin-x-toast",
+            "clobbers": [
+                "window.plugins.toast"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+            "id": "cordova-plugin-x-toast.tests",
+            "pluginId": "cordova-plugin-x-toast"
+        },
+        {
+            "file": "plugins/de.appplant.cordova.plugin.printer/www/printer.js",
+            "id": "de.appplant.cordova.plugin.printer.Printer",
+            "pluginId": "de.appplant.cordova.plugin.printer",
+            "clobbers": [
+                "plugin.printer",
+                "cordova.plugins.printer"
+            ]
+        },
+        {
+            "file": "plugins/org.apache.cordova.device/www/device.js",
+            "id": "org.apache.cordova.device.device",
+            "pluginId": "org.apache.cordova.device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+            "id": "org.apache.cordova.vibration.notification",
+            "pluginId": "org.apache.cordova.vibration",
+            "merges": [
+                "navigator.notification",
+                "navigator"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-inappbrowser": "1.1.1",
+        "com.gnustory.kakaolink": "0.0.1",
+        "com.phonegap.plugins.PushPlugin": "2.5.0",
+        "cordova-plugin-x-toast": "2.2.1",
+        "de.appplant.cordova.plugin.printer": "0.7.1",
+        "org.apache.cordova.device": "0.3.0",
+        "org.apache.cordova.vibration": "0.3.13",
+        "cordova-plugin-statusbar": "2.0.0",
+        "cordova-plugin-whitelist": "1.2.0"
+    }
+}
